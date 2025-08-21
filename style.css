@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+
+.reddit-logo{
+  width: 115px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 56px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search__input{
+  border: none;
+  outline: none;
+  background: transparent;
+  flex-grow: 1;
+  font-size: 14px;
+
+
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  width: 528px;
+  gap: 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.search:hover{
+  background: rgb(219, 228, 233);
+
+}
+
+/* .search__image{
+} */
+
+
+
