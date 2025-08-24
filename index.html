@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reddit Clone</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="header.css">
 </head>
 
 <body>
@@ -16,10 +17,140 @@
     <div class="search">
       <img src="images/002_search.svg" alt="" class="search__image">
       <input type="text" placeholder="Search Reddit" class="search__input">
+      <div class="search__results">
+        <div class="search__results--scrollable">
+          <ul class="recent__searches">
+            <li class="search__item">
+              <img src="images/community/019_community-icon-1.jpg" alt="" class="community__img">
+              <div class="recent__search--value">r/Webdev</div>
+              <button class="recent__search--remove">
+                <img src="images/icons/close.svg" alt="" class="close__icon">
+              </button>
+            </li>
+
+            <li class="search__item">
+              <img src="images/community/020_community-icon-3.png" alt="" class="community__img">
+              <div class="recent__search--value">r/react</div>
+              <button class="recent__search--remove">
+                <img src="images/icons/close.svg" alt="" class="close__icon">
+              </button>
+            </li>
+
+            <li class="search__item">
+              <img src="images/community/023_community-icon-4.png" alt="" class="community__img">
+              <div class="recent__search--value">r/JS</div>
+              <button class="recent__search--remove">
+                <img src="images/icons/close.svg" alt="" class="close__icon">
+              </button>
+            </li>
+
+            <li class="search__item">
+              <img src="images/community/021_community-icon-5.png" alt="" class="community__img">
+              <div class="recent__search--value">r/python</div>
+              <button class="recent__search--remove">
+                <img src="images/icons/close.svg" alt="" class="close__icon">
+              </button>
+            </li>
+
+            <li class="search__item">
+              <img src="images/community/024_community-icon-6.png" alt="" class="community__img">
+              <div class="recent__search--value">r/CSS</div>
+              <button class="recent__search--remove">
+                <img src="images/icons/close.svg" alt="" class="close__icon">
+              </button>
+            </li>
+          </ul>
+
+          <div class="trending__today">
+            <div class="trending__today--header">
+              <img src="images/icons/trending.svg" alt="">
+              <span class="trending__today--title">trending today</span>
+            </div>
+
+            <ul class="trending__list">
+              <li class="trending__list--item">
+                <div class="trending__item--info">
+                  <div class="trending__item--title">Yankees force WS Game 5</div>
+                  <div class="trending__item--description">FINAL: The New York Yankees take Game 4 of the World Series
+                  </div>
+                  <div class="trending__item--source">
+                    <img src="images/community/community-icon-6.png" alt="">
+                    <span>r/mlb and more</span>
+                  </div>
+                </div>
+                <img src="images/preview/preview-1.jpg" alt="" class="trending__item--preview">
+              </li>
+
+              <li class="trending__list--item">
+                <div class="trending__item--info">
+                  <div class="trending__item--title">Stanley Cup Final</div>
+                  <div class="trending__item--description">Playoff Game Thread: Florida Panthers (3-2) at Edmonton
+                    Oilers (2-3) - Game 6 - 21 Jun 2025 - 06:00PM MDT
+                  </div>
+                  <div class="trending__item--source">
+                    <img src="images/community/community-icon-7.png" alt="">
+                    <span>r/hockey and more</span>
+                  </div>
+                </div>
+                <img src="images/preview/preview-2.jpg" alt="" class="trending__item--preview">
+              </li>
+
+              <li class="trending__list--item">
+                <div class="trending__item--info">
+                  <div class="trending__item--title">Concord developer shut down</div>
+                  <div class="trending__item--description">PlayStation has closed Concord developer Firewalk | VGC
+                  </div>
+                  <div class="trending__item--source">
+                    <img src="images/community/community-icon-8.png" alt="">
+                    <span>r/gaming and more</span>
+                  </div>
+                </div>
+                <img src="images/preview/preview-3.jpg" alt="" class="trending__item--preview">
+              </li>
+
+              <li class="trending__list--item">
+                <div class="trending__item--info">
+                  <div class="trending__item--title">Tekashi 6ix9ine arrested</div>
+                  <div class="trending__item--description">Rapper Tekashi 6ix9ine arrested after he's accused of
+                    violating the conditions of his release
+                  </div>
+                  <div class="trending__item--source">
+                    <img src="images/community/community-icon-9.png" alt="">
+                    <span>r/news and more</span>
+                  </div>
+                </div>
+                <img src="images/preview/preview-4.jpg" alt="" class="trending__item--preview">
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="header__actions">
-      header acrtions
-    </div>
+    <ul class="header__action">
+      <li class="header__action--list">
+        <button> <img src="images/icons/advertise.svg" alt=""></button>
+      </li>
+
+      <li class="header__action--list">
+        <button> <img src="images/icons/chat.svg" alt=""></button>
+      </li>
+
+      <li class="header__action--list">
+        <button> <img src="images/icons/create-post.svg" alt=""></button>
+      </li>
+
+      <li class="header__action--list">
+        <button> <img src="images/icons/open-inbox.svg" alt="" class="open__inbox--button">
+          <div class="notification__counter">1</div>
+        </button>
+      </li>
+
+      <li class="header__action--list">
+        <button> <img src="images/icons/avatar.png" alt="" class="header__action--avatar">
+          <div class="online__indicator"></div>
+        </button>
+      </li>
+    </ul>
   </div>
   <div class="sidebar">sidebar</div>
   <div class="content">Content</div>

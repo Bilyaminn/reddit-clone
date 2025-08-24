@@ -1,6 +1,18 @@
-body{
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+img{
+  vertical-align: bottom;
+}
+
+
 
 .reddit-logo{
   width: 115px;
@@ -13,6 +25,8 @@ body{
   padding: 0 16px;
   height: 56px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1;
 }
 
 .search__input{
@@ -22,7 +36,10 @@ body{
   flex-grow: 1;
   font-size: 14px;
 
+}
 
+.search__input:focus ~ .search__results, .search__results:hover{
+  display: block;
 }
 
 .search{
@@ -33,6 +50,7 @@ body{
   gap: 10px;
   border-radius: 20px;
   transition: background-color 0.3s;
+  position: relative;
 }
 
 .search:hover{
@@ -40,8 +58,212 @@ body{
 
 }
 
-/* .search__image{
-} */
+.search__results{
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+
+  top: 0;
+  left: 0;
+  padding-top: 46px;
+  z-index: -1;
+  box-shadow:  0 1px 4px 0 rgba(0, 0, 0, 0.15), 
+               0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
 
 
+.search__results--scrollable{
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  max-height: calc(100vh - 56px - 8px);
+  overflow-y: auto;
+}
 
+.recent__searches{
+  list-style: none;
+  /* padding: 0;
+  margin: 0; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.recent__searches > li{
+  display: flex;
+  align-items: center;
+
+  padding: 4px 24px;
+  gap: 14px;
+}
+
+.recent__searches > li:hover{
+  background: #f6f8f9;
+  cursor: pointer;
+}
+
+.recent__searches > li:active{
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.recent__search--value{
+  font-size: 14px;
+  color: #333D42;
+}
+
+.community__img{
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+}
+
+.recent__search--remove{
+  margin-left: auto;
+  border: none;
+  outline: none;
+  padding: 8px;
+  border-radius: 50%;
+  background: none;
+
+}
+
+.recent__search--remove:hover{
+  background: rgb(219, 228, 233);
+  cursor: pointer;
+}
+
+.recent__search--remove:active{
+  background: rgb(0, 0, 0, 0.16);
+}
+
+.trending__today--header{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 0;
+}
+
+.trending__today--header img{
+  opacity: 0.6;
+}
+
+.trending__today--title{
+  color: rgb(92, 108, 116);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400px;
+ 
+}
+
+.trending__list{
+  list-style: none;
+}
+
+.trending__list--item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.trending__list--item:hover{
+  background-color: rgb(246, 248, 249);
+  cursor: pointer;
+}
+
+.trending__item--title{
+  color: rgb(51, 61, 66);
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trending__item--description{
+  color: rgb(51, 61, 66);
+  font-size: 12px;
+  margin: 2px 0 8px;
+}
+
+.trending__item--source img{
+  width: 16px;
+  border-radius: 50%;
+}
+
+.trending__item--source span{
+  font-size: 12px;
+  color: rgb(92, 108, 116)
+}
+
+.trending__item--preview{
+  width: 96px;
+  height: 72px;
+  border-radius: 5px;
+  align-self: center;
+  object-fit: cover;
+}
+
+.trending__item--info{
+  flex-grow: 1;
+}
+
+.header__action{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+}
+
+.header__action--list > button{
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+}
+
+.header__action--list > button:hover{
+  background: rgb(219, 228, 233);
+  border-radius: 20px;
+  cursor: pointer;
+
+}
+
+.header__action--avatar{
+  position: relative;
+  width: 32px;
+  border-radius: 16px;
+}
+
+.header__action--list > button:active{
+  background: transparent;
+}
+
+
+.notification__counter{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  right: 65px;
+  width: 16px;
+  height: 16px;
+  color: #fff;
+  background: red;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.open__inbox--button{
+  position: relative;
+}
+
+.online__indicator{
+  position: absolute;
+  background: rgb(1, 168, 22);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 10px;
+  border: 1px solid white;;
+}
